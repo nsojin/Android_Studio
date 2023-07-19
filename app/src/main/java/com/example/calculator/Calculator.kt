@@ -1,25 +1,25 @@
 package com.example.calculator
 
 class Calculator {
-    fun operate(num1:Int, num2:Int,op:String):Int{
+    fun operate(num1:Double, num2:Double,op:String):Double{
 
-        var result:Int =0
+        var add = AddOperation()
+        var sub = SubstractOperation()
+        var mul = MultiplyOperation()
+        var div = DivideOperation()
+        var result:Double = 0.0
 
         if (op == "+"){
-            result = num1 + num2
-            println("${num1}과${num2}를 더한 값은 ${num1+num2}입니다.")
+            result = add.operate(num1,num2)
         }
         else if (op == "-"){
-            result = num1 - num2
-            println("${num1}과${num2}를 뺀 값은 ${num1-num2}입니다.")
+            result = sub.operate(num1,num2)
         }
         else if (op == "*"){
-            result = num1 * num2
-            println("${num1}과${num2}를 곱한 값은 ${num1*num2}입니다.")
+            result = mul.operate(num1,num2)
         }
         else if (op == "/"){
-            result = num1 / num2
-            println("${num1}과${num2}를 나눈 값은 ${num1/num2}입니다.")
+            result = div.operate(num1,num2)
         }
         else if (op == "%"){
             result = num1 % num2
